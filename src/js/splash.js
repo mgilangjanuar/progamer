@@ -43,11 +43,13 @@ function reset() {
 }
 
 function menu() {
-  editor.setValue('// Write your code here')
-  sessionStorage.__state = 'splash'
-  new Audio('./src/audio/kenney_digitalaudio/Audio/zap1.ogg').play()
-  _init()
-  throw null
+  if (sessionStorage.__state === 'play') {
+    editor.setValue('// Write your code here')
+    sessionStorage.__state = 'splash'
+    new Audio('./src/audio/kenney_digitalaudio/Audio/zap1.ogg').play()
+    _init()
+    throw null
+  }
 }
 
 function quit() {

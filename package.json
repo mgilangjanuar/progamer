@@ -1,6 +1,6 @@
 {
   "name": "progamer",
-  "version": "1.0.0",
+  "version": "0.1.2",
   "description": "This game is dedicated exclusively for young students in Indonesia. The goal is to introduce programming in a fun way.",
   "main": "main.js",
   "scripts": {

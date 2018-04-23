@@ -1,4 +1,10 @@
 function gameover() {
+  if (sessionStorage.__state === 'start') {
+    setTimeout(function() {
+      _play()
+    }, 200)
+  }
+
   var tilesmap = [
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],

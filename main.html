@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>< Progamer! /></title>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+    <canvas id="canvas" width="800" height="576"></canvas>
+    <div id="console"></div>
+    <button id="go">Compile!</button>
+    <script src="./lib/ace-builds-c915483e909bc1b3061cabaaf932f796c723226b/src-min/ace.js"></script>
+    <script>
+        var editor = ace.edit('console')
+        editor.setTheme('ace/theme/monokai')
+        editor.session.setMode('ace/mode/javascript')
+        editor.session.setTabSize(2)
+        editor.session.on('change', function() {
+            editor.session.$worker.send("changeOptions", [{asi: true}])
+        })
+        editor.focus()
+    </script>
+    <script src="./lib/sweetalert2.min.js"></script>
+    <script src="./src/js/splash.js"></script>
+    <script src="./src/js/gameover.js"></script>
+    <script src="./src/js/levels/0.js"></script>
+    <script src="./src/js/levels/1.js"></script>
+    <script src="./src/js/levels/2.js"></script>
+    <script src="./src/js/levels/3.js"></script>
+    <script src="./src/js/levels/4.js"></script>
+    <script src="./src/js/levels/5.js"></script>
+    <script src="./src/js/levels/6.js"></script>
+    <script src="./src/js/levels/7.js"></script>
+    <script src="./src/js/levels/8.js"></script>
+    <script src="./src/js/levels/9.js"></script>
+    <script src="./src/js/levels/10.js"></script>
+    <script src="./src/js/levels/11.js"></script>
+    <script src="./src/js/levels/12.js"></script>
+    <script src="./src/js/scripts.js"></script>
+</body>
+</html>

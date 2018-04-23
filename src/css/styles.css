@@ -1,0 +1,38 @@
+html, body {
+    width: 100%;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+#console, .ace_editor {
+    position: absolute;
+    width: 324px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    resize: none;
+    font-size: 10pt;
+}
+
+button#go {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+
+button#go:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "progamer",
+  "version": "1.0.0",
+  "description": "This game is dedicated exclusively for young students in Indonesia. The goal is to introduce programming in a fun way.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build.mac": "electron-builder --mac",
+    "build.win": "electron-builder --win",
+    "build.linux": "electron-builder --linux",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.mgilangjanuar.progamer"
+  },
+  "author": "M Gilang Januar",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.8.4",
+    "electron-builder": "^20.10.0",
+    "electron-packager": "^12.0.1",
+    "electron-reload": "^1.2.2"
+  }
+}

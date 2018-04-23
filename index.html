@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>< Progamer! /></title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <style>
+        body {
+            background: #000000;
+        }
+        div {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+        iframe {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <iframe src="./main.html" width="900" height="576" frameborder="0"></iframe>
+    </div>
+    <script src="./lib/sweetalert2.min.js"></script>
+    <script>
+        var size = {
+            width: window.innerWidth || document.body.clientWidth,
+            height: window.innerHeight || document.body.clientHeight
+        }
+        if (size.width < 940 || size.height < 600) {
+            swal({
+                title: 'Not Supported',
+                text: 'Your browser is not supported. The minimal resolution to play this game is 940x600 px.',
+                type: 'error',
+                confirmButtonText: 'I have no idea what I do.'
+            })
+        }
+    </script>
+</body>
+</html>

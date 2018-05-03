@@ -1,12 +1,12 @@
 const { app, BrowserWindow } = require('electron')
-const watch = require('electron-reload')
+// const watch = require('electron-reload')
 const path = require('path')
 const url = require('url')
 
 
-watch(`${__dirname}/src`, {
-  electron: require(`${__dirname}/node_modules/electron`)
-})
+// watch(`${__dirname}/src`, {
+//   electron: require(`${__dirname}/node_modules/electron`)
+// })
   
 app.on('ready', () => {
   win = new BrowserWindow({

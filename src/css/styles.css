@@ -1,9 +1,9 @@
 html, body {
     width: 100%;
+    overflow: hidden;
 }
 
 body {
-    overflow: hidden;
     margin: 0;
 }
 
@@ -15,6 +15,12 @@ body {
     bottom: 0;
     resize: none;
     font-size: 10pt;
+}
+
+#map, #ui, #player {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 button#go {

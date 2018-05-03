@@ -1,6 +1,8 @@
-var context = document.getElementById('canvas').getContext('2d')
-var blocker = [1]
+var ui = document.getElementById('ui').getContext('2d')
+var map = document.getElementById('map').getContext('2d')
+var player = document.getElementById('player').getContext('2d')
 
+var blocker = [1]
 var map
 var character
 var oncompile

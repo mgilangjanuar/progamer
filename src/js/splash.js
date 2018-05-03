@@ -1,35 +1,23 @@
-function splash() {
-  map = _mapBuilder('./src/images/roguelikeSheet_transparent.png', [
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
+function sceneSplash() {
+  __game.clearUi()
+  __game.clearPlayer()
+  __game.buildMap([
+    [ 0, 0, 0, 0, 0, 0 ],
+    [ 0, 0, 0, 0, 0, 0 ],
+    [ 0, 0, 0, 0, 0, 0 ],
+    [ 0, 0, 0, 0, 0, 0 ],
+    [ 0, 0, 0, 0, 0, 0 ],
+    [ 0, 0, 0, 0, 0, 0 ]
   ])
-
-  setTimeout(function() {
-    var logo = new Image
-    logo.src = './src/images/logo.png'
-    logo.onload = function() {
-      context.drawImage(logo, 0,0, 1080,139, 90,90, 400,60)
-    }
-
-    var instruction = new Image
-    instruction.src = './src/images/instruction.png'
-    instruction.onload = function() {
-      context.drawImage(instruction, 0,0, 1080,675, 88,260, 400,260)
-    }
-
-    editor.setValue('// Write your code here')
-  }, 200)
+  __game.buildUi('logo')
+  __game.buildUi('instruction')
 }
 
 function play() {
   if (sessionStorage.__state === 'splash') {
     sessionStorage.__state = 'start'
     editor.setValue('')
-    _init()
+    __init()
   }
 }
 
@@ -38,7 +26,7 @@ function reset() {
   localStorage.__level = 0
   editor.setValue('// Write your code here')
   new Audio('./src/audio/kenney_digitalaudio/Audio/zap1.ogg').play()
-  _init()
+  __init()
   throw null
 }
 
@@ -47,7 +35,7 @@ function menu() {
     editor.setValue('// Write your code here')
     sessionStorage.__state = 'splash'
     new Audio('./src/audio/kenney_digitalaudio/Audio/zap1.ogg').play()
-    _init()
+    __init()
     throw null
   }
 }
@@ -83,7 +71,7 @@ function about() {
     new Audio('./src/audio/kenney_digitalaudio/Audio/zap1.ogg').play()
     editor.setValue(
       '/*************************\n * < Progamer! /> © 2018 *\n *************************/\n\n' +
-      '// version: Beta0.1.2\n\n\n' +
+      '// version: Released 0.1.2\n\n\n' +
       '// This game is dedicated\n' +
       '// exclusively for young\n' +
       '// students in Indonesia. The\n' +

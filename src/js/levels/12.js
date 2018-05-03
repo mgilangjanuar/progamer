@@ -1,11 +1,6 @@
-function level12() {
-  if (sessionStorage.__state === 'start') {
-    setTimeout(function() {
-      _play()
-    }, 200)
-  }
-
-  map = _mapBuilder('./src/images/roguelikeSheet_transparent.png', [
+function sceneLevel12() {
+  __game.clearUi()
+  __game.buildMap([
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0],
@@ -13,5 +8,9 @@ function level12() {
     [0, 0, 0, 0, 0, 0],
     [0, 3, 3, 3, 3, 0],
   ])
-  character = _charaterBuilder('./src/images/adventurer_tilesheet-alt.png', 5, 1, 'idle')
+  __game.buildPlayer({ x: 5, y: 1, state: 'idle' })
+
+  if (sessionStorage.__state === 'start') {
+    __game.play()
+  }
 }
